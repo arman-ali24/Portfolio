@@ -7,61 +7,52 @@ function HomePage() {
   return (
     <div>
       <Navbar />
+
       <motion.div
         initial={{ y: -20, opacity: 0, scale: 0.9 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: ".3", stiffness: "150" }}
-        exit={{ opacity: 0 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
         className={style.hero_component}
       >
         <div className={style.left_side}>
+          
+          {/* Intro Text */}
           <motion.p
-            initial={{ opacity: 0, x: "-10vw" }}
-            animate={{ opacity: 1, x: "0vw" }}
-            transition={{
-              type: "spring",
-              stiffness: "40",
-              duration: "3.5",
-              delay: 0.5,
-            }}
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
             className={style.upper_text_style}
           >
-            Hello I'm Arman
+            Hello, I'm <span className={style.highlight}>Arman</span>
           </motion.p>
+
           <motion.p
-            initial={{ opacity: 0, x: "-10vw" }}
-            animate={{ opacity: 1, x: "0vw" }}
-            transition={{
-              type: "spring",
-              stiffness: "40",
-              duration: "3.5",
-              delay: 0.5,
-            }}
-            className={style.bottom_text_style}
+           initial={{ opacity: 0, x: -40 }}
+           animate={{ opacity: 1, x: 0 }}
+           transition={{ duration: 1.2, delay: 0.3 }}
+           className={style.bottom_text_style}
           >
-            &lt;Software Engineer/&gt;
+          <span className={style.typewriter}>
+          &lt;Software Engineer/&gt;
+          </span>
           </motion.p>
+
+          {/* Short, Clean Professional Summary */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: "40",
-              duration: "1",
-              delay: "1.5",
-            }}
+            transition={{ duration: 1.2, delay: 0.7 }}
             className={style.detail_text}
           >
-            Pre-final year Computer Science student skilled in DSA,
-            Full Stack Development, and AI integration, Experienced in building
-            scalable architectures and integrating LangChain-based intelligent features.
-            Seeking opportunities to grow as a software engineer.
-
+            <b>Fullstack</b> and <b>LangChain</b> developer with strong <b>DSA</b> skills,
+            building <b>scalable</b> applications and intelligent <b>AI-powered</b> features.
           </motion.p>
+
+          {/* Button */}
           <motion.button
-            initial={{ opacity: 0, x: "-7vw" }}
-            animate={{ opacity: 1, x: "0vw" }}
-            transition={{ delay: 2.5, stiffness: 40, duration: 0.7 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
             className={style.download_btn}
           >
             <a
@@ -73,10 +64,12 @@ function HomePage() {
             </a>
           </motion.button>
         </div>
+
+        {/* Right Section - Image */}
         <motion.div
-          initial={{ opacity: 0, scale: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, stiffness: 40, duration: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
           className={style.right_section}
         >
           <div className={style.img_section}>
