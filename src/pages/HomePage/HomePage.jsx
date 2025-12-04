@@ -16,7 +16,6 @@ function HomePage() {
       >
         <div className={style.left_side}>
           
-          {/* Intro Text */}
           <motion.p
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -37,7 +36,6 @@ function HomePage() {
           </span>
           </motion.p>
 
-          {/* Short, Clean Professional Summary */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,7 +46,6 @@ function HomePage() {
             building <b>scalable</b> applications and intelligent <b>AI-powered</b> features.
           </motion.p>
 
-          {/* Button */}
           <motion.button
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -65,7 +62,6 @@ function HomePage() {
           </motion.button>
         </div>
 
-        {/* Right Section - Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
